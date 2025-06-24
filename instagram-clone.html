@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Gerekli meta etiketleri -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <title>Instagram Clone!</title>
+
+    <style>
+        body {
+            background-color: #fafafa;
+            padding-top: 54px; /* Navbar yüksekliği kadar padding */
+        }
+        
+        /* Navbar stilleri */
+        .navbar {
+            position: fixed; /* sticky yerine fixed kullanıyoruz */
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 54px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Diğer stiller */
+        .middlearea {
+            margin-top: 2rem;
+        }
+        
+        .rightpanel {
+            background-color: white;
+            border: none;
+        }
+        
+        .stickysidebar {
+            position: sticky;
+            top: 74px; /* Navbar'dan biraz aşağıda */
+        }
+        
+        .story-name {
+            display: block;
+            text-align: center;
+            margin-top: 5px;
+        }
+        
+        .card-header, .card-footer {
+            background-color: white !important;
+        }
+        
+        .instagram-menu {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-around;
+            z-index: 1000;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e9ecef;
+        }
+        
+        /* Footer stilleri */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            margin-top: 50px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        /* Mobil menüyü sadece mobilde göster */
+        @media (min-width: 768px) {
+            .instagram-menu {
+                display: none;
+            }
+        }
+    </style>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#">
+            <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram Logo">
+        </a>
+        
+        <!-- Arama kutusu (sadece masaüstü) -->
+        <form class="form-inline my-2 my-lg-0 d-none d-md-block mx-auto">
+            <input class="form-control" type="search" placeholder="Ara" style="width: 215px;">
+        </form>
+        
+        <!-- Menü ikonları -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-home fa-lg"></i></a>
+            </li>
+            <li class="nav-item ml-3">
+                <a class="nav-link" href="#"><i class="fab fa-facebook-messenger fa-lg"></i></a>
+            </li>
+            <li class="nav-item ml-3">
+                <a class="nav-link" href="#"><i class="far fa-compass fa-lg"></i></a>
+            </li>
+            <li class="nav-item ml-3">
+                <a class="nav-link" href="#"><i class="far fa-heart fa-lg"></i></a>
+            </li>
+            <li class="nav-item ml-3">
+                <a class="nav-link" href="#">
+                    <img src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/83792429_185184289374945_1047727451901263872_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=oor-Z1FIzvgAX-uXuhs&tp=1&oh=e92baf321c3e2e5ebf9416204da05c82&oe=602E0320" 
+                         style="width: 24px; height: 24px; border-radius: 50%;">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Ana İçerik -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Profil Bilgileri -->
+            <div class="col-12 mb-5">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img src="https://instagram.fist13-1.fna.fbcdn.net/v/t51.2885-19/s150x150/123456789_123456789123456_1234567890123456789_n.jpg" 
+                             alt="Profile" class="profile-pic">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="d-flex align-items-center mb-4">
+                            <h2 class="mb-0 mr-4">hellraiser89</h2>
+                            <button class="btn btn-outline-secondary btn-sm mr-3">Edit Profile</button>
+                            <a href="#"><i class="fas fa-cog fa-lg"></i></a>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="mr-5"><strong>42</strong> posts</div>
+                            <div class="mr-5"><strong>1.2k</strong> followers</div>
+                            <div class="mr-5"><strong>873</strong> following</div>
+                        </div>
+                        
+                        <div>
+                            <h5>Hell Raiser</h5>
+                            <p>Painter | Traveler | Coffee enthusiast</p>
+                            <a href="#">www.example.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hikayeler -->
+            <div class="col-12 mb-4">
+                <div class="d-flex overflow-auto">
+                    <div class="text-center mr-3">
+                        <img src="https://via.placeholder.com/60" class="rounded-circle border border-danger" width="60" alt="Story">
+                        <span class="story-name">Your Story</span>
+                    </div>
+                    <div class="text-center mr-3">
+                        <img src="https://via.placeholder.com/60" class="rounded-circle border border-danger" width="60" alt="Story">
+                        <span class="story-name">user1</span>
+                    </div>
+                    <div class="text-center mr-3">
+                        <img src="https://via.placeholder.com/60" class="rounded-circle border border-danger" width="60" alt="Story">
+                        <span class="story-name">user2</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gönderiler -->
+            <div class="col-md-8">
+              <div class="card mb-4">
+                  <div class="card-header d-flex align-items-center">
+                      <img src="https://via.placeholder.com/32" class="rounded-circle mr-2" width="50" alt="Profile">
+                      <div class="d-flex flex-column"> <!-- Yeni eklenen div -->
+                          <strong>username</strong>
+                          <p class="mb-0"><small>This is a sample post caption</small></p>
+                      </div>
+                      <div class="ml-auto">...</div>
+                  </div>
+                  <img src="https://via.placeholder.com/600x500" class="card-img-top" alt="Post">
+                  <div class="card-footer">
+                      <div class="d-flex mb-2">
+                          <button class="btn btn-link p-0 mr-3"><i class="far fa-heart fa-lg"></i></button>
+                          <button class="btn btn-link p-0 mr-3"><i class="far fa-comment fa-lg"></i></button>
+                          <button class="btn btn-link p-0"><i class="far fa-paper-plane fa-lg"></i></button>
+                          <button class="btn btn-link p-0 ml-auto"><i class="far fa-bookmark fa-lg"></i></button>
+                      </div>
+                      <p class="text-muted">View all 42 comments</p>
+                      <p class="text-muted small">2 HOURS AGO</p>
+                  </div>
+              </div>
+          </div>
+            
+            <!-- Sağ Panel (sadece masaüstü) -->
+            <div class="col-md-4 d-none d-md-block">
+                <div class="rightpanel stickysidebar">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" width="40" alt="Profile">
+                        <div>
+                            <strong>hellraiser89</strong>
+                            <p class="text-muted mb-0">Hell Raiser</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="text-muted">Suggestions For You</span>
+                        <button class="btn btn-link p-0">See All</button>
+                    </div>
+                    
+                    <!-- Önerilen hesaplar -->
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/32" class="rounded-circle mr-2" width="32" alt="Profile">
+                            <div class="flex-grow-1">
+                                <strong>user1</strong>
+                                <p class="text-muted mb-0">Followed by user2</p>
+                            </div>
+                            <button class="btn btn-link p-0 text-primary">Follow</button>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/32" class="rounded-circle mr-2" width="32" alt="Profile">
+                            <div class="flex-grow-1">
+                                <strong>user3</strong>
+                                <p class="text-muted mb-0">New to Instagram</p>
+                            </div>
+                            <button class="btn btn-link p-0 text-primary">Follow</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="text-muted">This is a footer with some space above it.</p>
+                    <p class="text-muted">© 2023 Instagram Clone - Not affiliated with Instagram</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobil Menü -->
+    <div class="instagram-menu d-md-none">
+        <a href="#" class="active"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="far fa-compass"></i></a>
+        <a href="#"><i class="far fa-plus-square"></i></a>
+        <a href="#"><i class="far fa-heart"></i></a>
+        <a href="#"><i class="far fa-user"></i></a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
