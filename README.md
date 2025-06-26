@@ -3,7 +3,7 @@
 
     Bootstrap 5 kullanılarak oluşturulmuş responsive tasarım
 
-    Koyu renkli navigasyon menüsü
+    Navigasyon menüsü
 
     Modern jumbotron hero bölümü
 
