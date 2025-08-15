@@ -1,26 +1,20 @@
-# Week-3
-Özellikler
+# Bootcamp-Week3
 
-    Bootstrap 5 kullanılarak oluşturulmuş responsive tasarım
+**Features**
 
-    Navigasyon menüsü
+- Responsive design built with Bootstrap 5
+- Navigation menu for easy site navigation
+- Modern jumbotron hero section
+- Blog posts presented using uniform-sized card layout
+- Content arranged using Bootstrap grid system
+- Mobile-friendly design for all screen sizes
 
-    Modern jumbotron hero bölümü
+**Technologies Used**
 
-    Eşit boyutlarda kart yapısı kullanılan blog gönderileri
+HTML5
+Bootstrap 5.3
+CSS3 (minimal custom styles)
 
-    Grid sistemi ile düzenlenmiş içerik
+**Installation**
 
-    Mobil uyumlu tasarım
-
-Kullanılan Teknolojiler
-
-    HTML5
-
-    Bootstrap 5.3
-
-    CSS3 (minimal özel stiller)
-
-Kurulum
-
-Bu projeyi çalıştırmak için herhangi bir kurulum gerekmemektedir. Sadece tarayıcıda HTML dosyasını açmanız yeterlidir.
+No installation is required to run this project. Simply open the HTML file in your web browser.
